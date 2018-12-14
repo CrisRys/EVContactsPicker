@@ -115,7 +115,7 @@ import ContactsUI
         self.navigationItem.rightBarButtonItem = barButton
         
         if self.navigationController?.viewControllers.first == self {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel,
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel,
                                                                     target: self,
                                                                     action: #selector(cancelTapped))
         }
@@ -360,7 +360,7 @@ import ContactsUI
         if !self.useExternal {
             cell.accessoryView = UIButton(type: .detailDisclosure)
             let but = cell.accessoryView as! UIButton
-            but.addTarget(self, action: #selector(EVContactsPickerViewController.viewContactDetail(_:)), for: UIControlEvents.touchUpInside)
+            but.addTarget(self, action: #selector(EVContactsPickerViewController.viewContactDetail(_:)), for: UIControl.Event.touchUpInside)
         } else {
             cell.accessoryType = .none
             cell.accessoryView?.isHidden = true
