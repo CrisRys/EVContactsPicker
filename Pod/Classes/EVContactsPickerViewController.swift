@@ -79,6 +79,7 @@ import ContactsUI
     }
     
     func setup() -> Void {
+        self.edgesForExtendedLayout = []   //Prevent views from starting under navigation bar
         updateTitle()
         self.curBundle = Bundle(for: type(of: self))
         if( self.useExternal == false ) {
